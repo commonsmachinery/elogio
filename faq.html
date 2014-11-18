@@ -6,10 +6,118 @@ root: "../"
 
 <div class="faq">
 <h2>General questions</h2>
-<p><strong>What's the purpose of Elog.io?</strong></p>
-<p>Elog.io is.. blah blah.</p>
+<p><strong>What does Elog.io do?</strong></p>
+<p>
+Elog.io sits alongside your browser and gives you an opportunity to
+explore the photos that you encounter while browsing. For any of the
+photographs that are part of the Elog.io catalog, it can tell you
+information about the author of the photo, where it's from, and what
+permissions you could have to use it.
+</p>
+
+<p><strong>What photos do you store information about?</strong></p>
+<p>
+ We currently have information about photographs from
+ <a href="http://commons.wikipedia.org">Wikimedia Commons</a>, a collection
+ of approximately 23 million images (November 2014). The photographs on
+ Wikimedia Commons in turn come from a wide variety of sources: the authors
+ themselves, imported from <a href="http://flickr.com">Flickr</a>, or other
+ sources.
+</p>
+<p>
+ Elog.io is constantly expanding on the number of photographs we have in
+ our database, and the aim is to include as much as possible of all openly
+ licensed photos.
+</p>
+
+<p><strong>So only openly licensed photos then?</strong></p>
+<p>
+ Yes. We strongly believe in the open ecosystem and believe that answering
+ the basic question: is this openly licensed? for any image is important to
+ facilitate the ecosystem. For photographs that you can identify through 
+ Elog.io, you can be reasonably certain that they are indeed licensed in the
+ way indicated (public domain, a Creative Commons license or similar).
+</p>
+ 
+<p><strong>Why is this even important?</strong></p>
+<p>
+ From a practical perspective, knowing who authored an image and what terms
+ and conditions it's available under is important in order to understand how
+ you may use an image, and what attribution you must provide when you do.
+</p>
+<p>
+ What we believe is that having this information available also place the
+ photograph in its right cultural context. Knowing where it's from and who
+ authored it contributed to our understanding of a photograph, it increases
+ its value, and makes us relate to it in a different way. We think that if
+ people had this information available about any photograph they encountered
+ online, the need to enforce and assert copyright would also be less,
+ and over time, we can create an ecosystem where mutal respect and common
+ sense take precedence.
+</p>
 
 <h2>Image matching</h2>
+<p><strong>Why doesn't Elog.io match X?</strong></p>
+<p>
+ The matching algorithm that powers Elog.io is based on
+ <a href="http://blockhash.io">Blockhash</a>, a free and open source software
+ implementation of an image matching algorithm. In our research, we've found
+ that this algorithm gives the best possible matches and it regularly
+ outperforms many other algorithms. That doesn't mean it's perfect though!
+</p>
+<p>
+ Blockhash is less perceptive of landscape photographs, and in
+ general any photograph which includes large amounts of similar colors and
+ contrasting areas. For instance, a photograph which includes the open sky
+ in its upper half, and some buildings or other features in the lower half,
+ has an area of very similar color (the sky) and significant contrast (between
+ its upper and lower half). Such photographs, from an algorithm point of
+ view, are very similar to each other, and creating good matches are almost
+ impossible.
+</p>
+<p>
+ The Blockhash algorithm also doesn't deal well with modifications to
+ photographs. We've set the bar at verbatim re-use. Photographs that are
+ resized or are changed from JPG to PNG or similarly, but still retain the
+ same aspect ratio, and the same image, are the photographs that the algorithm
+ is designed to match. The moment you crop the image, add borders, change the
+ colors, or do other manipulations, you're creating a derivative work, and
+ Elog.io will most likely not match this.
+</p>
+
+<p><strong>Why don't you use algorithm Y?</strong></p>
+<p>
+ In our work with Elog.io, we've evaluated a number of different algorithms.
+ Chances are, Y is one of them, but we'd still love to hear your thoughts
+ about it! If you have a compelling algorithm, we may consider switching to
+ it. Here are the considerations and conditions we place on our algorithms:
+</p>
+<ul>
+ <li>They should not be encumbered by patents, and we should be able to implement them in Free and Open Source Software, like Elog.io.</li>
+ <li>They should work well in a browser, meaning that they should be reasonably fast and easy to implement in JavaScript.</li>
+ <li>They should generate a hash value, with the particular characteristics that small changes to the image (resize, etc) should result in small changes to the hash.</li>
+ <li>Over a random sample of images, they should generate no or very few false positives (images that are matched against each other despite being different) and no or few false negatives (images that doesn't match, despite that they are the same).</li>
+ <li>In general, they should prioritise generating no false positives, since a false positive is worse than a false negative.</li>
+</ul>
+<p>
+ When we evaluate an algorithm, we generate hashes against a
+ representative set of images that we have on file. We do two tests. In the
+ first test we transform the images (resize, format change, cropping,
+ add borders, rotate), and we test to see how much we can transform an image
+ while still matching the original. In the second test we generate hashes
+ for a large amount of images and we cross compare them against each other.
+ We calculate the hamming distance (number of bits that differ) between the
+ hashes and find out how often we would get false positives.
+</p>
+
+<p><strong>But can you please try algorithm Y?</strong></p>
+<p>
+ If you've looked at our considerations and conditions and think that you
+ have an algorithm that's worth trying, we would still love to test it.
+ The easiest way is that you fork <a href="http://github.com/commonsmachinery/blockhash">Blockhash on Github</a> and create an implementation with your
+ algorithm. You can then submit a pull request and/or create an issue with
+ a reference to your fork, to allow us to pull your code to test it.
+
 <h2>Database information</h2>
 <h2>Privacy policy</h2>
 
