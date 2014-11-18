@@ -19,7 +19,7 @@ permissions you could have to use it.
 <p>
  We currently have information about photographs from
  <a href="http://commons.wikipedia.org">Wikimedia Commons</a>, a collection
- of approximately 23 million images (November 2014). The photographs on
+ of approximately 23 million photographs (November 2014). The photographs on
  Wikimedia Commons in turn come from a wide variety of sources: the authors
  themselves, imported from <a href="http://flickr.com">Flickr</a>, or other
  sources.
@@ -33,17 +33,28 @@ permissions you could have to use it.
 <p><strong>So only openly licensed photos then?</strong></p>
 <p>
  Yes. We strongly believe in the open ecosystem and believe that answering
- the basic question: is this openly licensed? for any image is important to
+ the basic question: is this openly licensed? for any photograph is important to
  facilitate the ecosystem. For photographs that you can identify through 
  Elog.io, you can be reasonably certain that they are indeed licensed in the
  way indicated (public domain, a Creative Commons license or similar).
 </p>
+
+<p><strong>Can I include my own photos?</strong></p>
+<p>
+ We'd love to include your photos, or any collections that you're responsible
+ for, so we can make them findable through Elog.io. Please
+ <a href="#contact">contact us</a> for more information. Please note that at
+ this time, we're primarily looking at including larger collections of openly
+ licensed photographs, and the more work you're willing to do yourself on
+ making them available to us - or creating a project together to do the work -
+ the more likely it is that we can include them quickly.
+</p>
  
 <p><strong>Why is this even important?</strong></p>
 <p>
- From a practical perspective, knowing who authored an image and what terms
+ From a practical perspective, knowing who authored a photograph and what terms
  and conditions it's available under is important in order to understand how
- you may use an image, and what attribution you must provide when you do.
+ you may use an photograph, and what attribution you must provide when you do.
 </p>
 <p>
  What we believe is that having this information available also place the
@@ -56,12 +67,20 @@ permissions you could have to use it.
  sense take precedence.
 </p>
 
+<p><strong>What's your privacy policy?</strong></p>
+<p>
+ We take every precaution to keep your information safe, and we don't
+ purposefully collect any more information than we need to do the actual
+ processing on your behalf. We also remove information as soon as we're
+ done with it. You can read more in our <a href="/privacy/">Privacy Policy</a>.
+</p>
+
 <a name="matching"></a><h2>Image matching</h2>
 <p><strong>Why doesn't Elog.io match X?</strong></p>
 <p>
  The matching algorithm that powers Elog.io is based on
  <a href="http://blockhash.io">Blockhash</a>, a free and open source software
- implementation of an image matching algorithm. In our research, we've found
+ implementation of an photograph matching algorithm. In our research, we've found
  that this algorithm gives the best possible matches and it regularly
  outperforms many other algorithms. That doesn't mean it's perfect though!
 </p>
@@ -79,8 +98,8 @@ permissions you could have to use it.
  The Blockhash algorithm also doesn't deal well with modifications to
  photographs. We've set the bar at verbatim re-use. Photographs that are
  resized or are changed from JPG to PNG or similarly, but still retain the
- same aspect ratio, and the same image, are the photographs that the algorithm
- is designed to match. The moment you crop the image, add borders, change the
+ same aspect ratio, and the same photograph, are the photographs that the algorithm
+ is designed to match. The moment you crop the photograph, add borders, change the
  colors, or do other manipulations, you're creating a derivative work, and
  Elog.io will most likely not match this.
 </p>
@@ -95,17 +114,17 @@ permissions you could have to use it.
 <ul>
  <li>They should not be encumbered by patents, and we should be able to implement them in Free and Open Source Software, like Elog.io.</li>
  <li>They should work well in a browser, meaning that they should be reasonably fast and easy to implement in JavaScript.</li>
- <li>They should generate a hash value, with the particular characteristics that small changes to the image (resize, etc) should result in small changes to the hash.</li>
- <li>Over a random sample of images, they should generate no or very few false positives (images that are matched against each other despite being different) and no or few false negatives (images that doesn't match, despite that they are the same).</li>
+ <li>They should generate a hash value, with the particular characteristics that small changes to the photograph (resize, etc) should result in small changes to the hash.</li>
+ <li>Over a random sample of photographs, they should generate no or very few false positives (photographs that are matched against each other despite being different) and no or few false negatives (photographs that doesn't match, despite that they are the same).</li>
  <li>In general, they should prioritise generating no false positives, since a false positive is worse than a false negative.</li>
 </ul>
 <p>
  When we evaluate an algorithm, we generate hashes against a
- representative set of images that we have on file. We do two tests. In the
- first test we transform the images (resize, format change, cropping,
- add borders, rotate), and we test to see how much we can transform an image
+ representative set of photographs that we have on file. We do two tests. In the
+ first test we transform the photographs (resize, format change, cropping,
+ add borders, rotate), and we test to see how much we can transform a photograph
  while still matching the original. In the second test we generate hashes
- for a large amount of images and we cross compare them against each other.
+ for a large amount of photographs and we cross compare them against each other.
  We calculate the hamming distance (number of bits that differ) between the
  hashes and find out how often we would get false positives.
 </p>
@@ -117,9 +136,55 @@ permissions you could have to use it.
  The easiest way is that you fork <a href="http://github.com/commonsmachinery/blockhash">Blockhash on Github</a> and create an implementation with your
  algorithm. You can then submit a pull request and/or create an issue with
  a reference to your fork, to allow us to pull your code to test it.
+</p>
 
 <a name="database"></a><h2>Database information</h2>
-<a name="privacy"></a><h2>Privacy policy</h2>
+<p><strong>How many photographs are in your database?</strong></p>
+<p>
+As of the 18th of November 2014, we have information of 22,412,293 photographs in the
+Elog.io catalog. These photographs are exclusively from Wikimedia Commons
+and as such represent a very wide variety of photographs, most of which are
+already used elsewhere in Wikipedia.
+</p>
+
+<p><strong>What information do you store?</strong></p>
+<p>
+We store information about the author, title and license information about
+each photograph. In addition to this, we record the URLs of the photograph
+as well as at least one thumbnail or smaller resolution photograph. This is the
+information that we get from Wikimedia Commons.
+</p>
+<p>
+We supplement the information from Wikimedia Commons with our own
+calculation of a <a href="http://blockhash.io">Blockhash</a> value for each
+photograph.
+</p>
+
 
 <a name="contact"></a><h2>Contact information</h2>
+<strong><p>Who runs this?</p></strong>
+<p>
+ The initial work of Elog.io was provided by <a href="http://commonsmachinery.se">Commons Machinery</a>, funded by the <a href="http://shuttleworthfoundation.org">Shuttleworth Foundation</a>. The project is run as a free and open source
+ project by <a href="http://about.me/jonaso">Jonas Öberg</a>. Hosting is
+ currently provided Commons Machinery.
+</p>
+
+<strong><p>Can I email you?</p></strong>
+<p>
+ We'd love to hear from you! You can email us at hello@elog.io.
+</p>
+
+<strong><p>What other ways can I get in touch?</p></strong>
+<p>
+ Email is really the key to our hearts, but you can also reach out to us
+ on <a href="http://twitter.com/elog_io">twitter (@elog_io)</a> or by
+ sending post to us at:
+</p>
+<p>
+ Elog.io<br />
+ Åsgatan 5<br />
+ 646 32 Gnesta<br />
+ SWEDEN
+</p>
+
 </div>
