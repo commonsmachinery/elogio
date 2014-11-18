@@ -29,11 +29,11 @@ h6 {
 .navbar-brand {
     background: url(../img/icon_48.png) no-repeat center center;
     background-size: 40px 40px;
-    margin-left: -45px;
+    margin-left: -90px;
 }
 
 .navbar-brand > span {
-    padding-left: 45px;
+    padding-left: 90px;
 }
 .intro-header {
     padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
