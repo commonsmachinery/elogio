@@ -28,7 +28,7 @@ h6 {
 
 .navbar-brand {
     background: url(../img/icon_48.png) no-repeat center center;
-    padding-left: 50px;
+    margin-left: 50px;
 }
 
 .intro-header {
