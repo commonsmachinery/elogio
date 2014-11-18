@@ -1,12 +1,13 @@
 ---
 layout: default
-img: ipad.png
+img: screenshot-0.7.0.png
 category: Services
-title: Death to the Stock Photo:<br>Special Thanks
+title: What about this photo?
 description: |
-  <p class="lead">A special thanks to <a target="_blank"
-  href="http://join.deathtothestockphoto.com/">Death to the Stock
-  Photo</a> for providing the photographs that you see in this template.
-  Visit their website to become a member!</p>
+  <p class="lead">Elog.io makes it easy to search for information about
+  photographs you see while browsing. Authors, titles and licensing
+  information is available for any photograph part of the Elog.io catalog 
+  (currently 22 million images from Wikimedia Commons).
+  </p>
 
 ---
