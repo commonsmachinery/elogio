@@ -5,5 +5,37 @@ root: "../"
 ---
 
 <div class="faq">
+<a name="code"></a><h2>The Code</h2>
+<p>
+ The bits and pieces that make up Elog.io is in our
+ <a href="http://github.com/commonsmachinery/">Github</a>, but specifically
+ the following pieces make up the whole:
+</p>
 
+<ul>
+ <li><a href="http://github.com/commonsmachinery/elogio.browser">Elog.io Browser Extensions</a> - a single repository from which we build both Firefox and Chrome extensions with shared code between them (GNU GPLv3)</li>
+ <li><a href="http://blockhash.io">Blockhash</a> - the algorithm we use to identify images (MIT license). An <a href="https://github.com/commonsmachinery/blockhash-rfc/">RFC</a> (in progress) describes the algorithm in more detail. There are also implementations in <a href="https://github.com/commonsmachinery/blockhash-python/">Python</a> and <a href="https://github.com/commonsmachinery/blockhash-js/">JavaScript</a> (both MIT licensed).</li>
+ <li><a href="http://hmsearch.io">HmSearch</a> - a C++ implementation of a hamming distance search algorithm (MIT license). We also provide <a href="https://github.com/commonsmachinery/hmsearch-node">Node bindings</a> for HmSearch. Master branch works against a Kyoto Cabinet backend, but branches exist for working against LevelDB or PostgreSQL. We currently use PostgreSQL as our own backend.</li>
+ <li><a href="https://github.com/commonsmachinery/commonshasher">Commons Hasher</a> - our script that reads database dumps from Wikimedia and retrieves information from the Wikimedia API, as well as calculate hashes of images retrieved (GNU GPLv3).</li>
+ <li><a href="https://github.com/commonsmachinery/catalog">Catalog</a> - our catalog infrastructure, that provides the API which the browser extensions communicate with (GNU GPLv3).</li>
+</ul>
+
+<a name="API"></a><h2>The API</h2>
+<p>
+ <strong>Endpoint: </strong>https://catalog.elog.io/
+</p>
+<p>
+ The catalog API is <a href="http://docs.cmcatalog.apiary.io/">documented</a>
+ with Apiary and we encourage you to check it out. Please do note that while
+ the API supports user profiles and extensive information about works, we
+ currently only make use of the API calls that lookup and provide information
+ about works and which do not require authentication.
+</p>
+<p>
+ Information about the photographs in the catalog is carried within
+ W3C Media Annotations. There are two examples (for JavaScript and Python)
+ on <a href="https://github.com/commonsmachinery/catalog/tree/master/examples">Github</a> that's a good starting point for learning how to communicate with
+ the catalog.
+</p>
+ 
 </div>
