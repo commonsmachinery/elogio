@@ -4,9 +4,13 @@
 
 	<body>
 		{% include navigation.html %}
-                <div style="padding: 100px">
-		     {{ page.content }}
-                </div>
+        <div class="container" style="padding-top: 50px">
+          <div class="row">
+            <div class="col-lg-12">
+                {{ page.content }}
+            </div>
+          </div>
+        </div>
 
 		{% include footer.html %}
 		{% include js.html %}
