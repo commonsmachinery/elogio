@@ -26,9 +26,9 @@ social:
   - icon: twitter
     title: "@elog_io"
     url: https://twitter.com/elog_io
-  - icon: twitter
-    title: "@commonsmachine"
-    url: https://twitter.com/commonsmachine
+  - icon: send
+    title: "hello@elog.io"
+    url: "mailto:hello@elog.io"
   - icon: github
     title: github
     url: https://github.com/commonsmachinery
