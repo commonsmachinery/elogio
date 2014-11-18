@@ -23,12 +23,15 @@ permalink: pretty
 # ----------------------- #
 
 social:
-  - title: twitter
-    url: https://twitter.com/SBootstrap
-  - title: github
-    url: https://github.com/IronSummitMedia/startbootstrap
-  - title: linkedin
-    url: 
+  - icon: twitter
+    title: @elog_io
+    url: https://twitter.com/elog_io
+  - icon: twitter
+    title: @commonsmachine
+    url: https://twitter.com/commonsmachine
+  - icon: github
+    title: github
+    url: https://github.com/commonsmachinery
 
 download:
   - title: Chrome
