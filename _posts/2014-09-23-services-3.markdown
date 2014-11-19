@@ -1,12 +1,11 @@
 ---
 layout: default
-img: phones.png
+img: api.jpg
 category: Services
-title: Google Web Fonts and<br>Font Awesome Icons
+title: Open API
 description: |
-  <p class="lead">This template features the 'Lato' font,
-  part of the <a target="_blank" href="http://www.google.com/fonts">Google
-  Web Font library</a>, as well as <a target="_blank"
-  href="http://fontawesome.io">icons from Font Awesome</a>.</p>
-
+  <p class="lead">Elog.io provides an open API for developers to make
+  use of. You can look up photographs through the API and make use of the
+  metadata provided in your own applications.
+  </p>
 ---

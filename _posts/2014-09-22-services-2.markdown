@@ -1,13 +1,15 @@
 ---
 layout: default
-img: dog.png
+img: locopy.jpg
 category: Services
-title: 3D Device Mockups<br>by PSDCovers
+title: Copy with attribution!
 description: |
-  <p class="lead">Turn your 2D designs into high quality, 3D
-  product shots in seconds using free Photoshop actions by <a
-  target="_blank" href="http://www.psdcovers.com/">PSDCovers</a>! Visit
-  their website to download some of their awesome, free photoshop
-  actions!</p>
+  <p class="lead">For any photograph that's part of Elog.io, you can
+  choose to copy the photo as an HTML fragment that includes the
+  attribution. Perfect for pasting into LibreOffice, Word, Wordpress,
+  or any other application that can manage HTML. For those that don't,
+  we include the option to copy just the attribution string as text as
+  well.
+  </p>
 
 ---
