@@ -36,6 +36,6 @@ social:
 download:
   - title: Chrome
     url: https://chrome.google.com/webstore/detail/elogio-browser-extension/fggflpkcoiangfbhbekafhpkijbglcmi
-  - title: Firefox
-    url: http://elog.io/dl/firefox-0.9.0.xpi
+#  - title: Firefox
+#    url: http://elog.io/dl/firefox-0.9.0.xpi
 
