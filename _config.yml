@@ -37,4 +37,4 @@ download:
   - title: Chrome
     url: https://chrome.google.com/webstore/detail/elogio-browser-extension/fggflpkcoiangfbhbekafhpkijbglcmi
   - title: Firefox
-    url: https://addons.mozilla.org/en-US/firefox/addon/elogio/
+    url: http://elog.io/dl/firefox-0.9.2.xpi
