@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	{% include head.html %}
+
+	<body>
+		{% include navigation.html %}
+        <div class="container" style="padding-top: 50px">
+          <div class="row">
+            <div class="col-md-2" style="padding-top: 4em">
+                <p><a href="#general">What is Elog.io?</a></p>
+                <p><a href="#founder">Who runs Elog.io?</a></p>
+                <p><a href="#why">Why Elog.io?</a></p>
+                <p><a href="#news">Elog.io in the news</a></p>
+                <p><a href="#quotes">Voices about Elog.io</a></p>
+                <p><a href="#media">Logotypes and Images</a></p>
+                <p><a href="#more">More Information &amp; Contact</a></p>
+            </div>
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-8" style="padding-top: 2em">
+                {{ page.content }}
+            </div>
+          </div>
+        </div>
+
+		{% include footer.html %}
+		{% include js.html %}
+	</body>
+</html>
