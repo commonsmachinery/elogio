@@ -23,7 +23,7 @@ $(function() {
     
     $('.twitter').on('click', function() {
         var loc = encodeURIComponent('http://elog.io/40m'),
-                title = "Credit where credit is due, join the #attributionrevolution — ",
+                title = "Credit where credit is due, join the \#attributionrevolution — ",§
                 w = 580, h = 300,
                 left = (screen.width/2)-(w/2),
                 top = (screen.height/2)-(h/2);
