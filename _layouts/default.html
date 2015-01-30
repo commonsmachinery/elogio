@@ -11,10 +11,7 @@
 		{% include js.html %}
 <script>
 var popup = new $.Popup();
-setTimeout(function(){
-    popup.close();
-}, 10000);
-popup.open("<h2>Help us give credit!</h2><p>Hi, you may not have seen, but we've launched a campaign to help support future work on Elog.io at <a href='indiegogo.com/campaigns/elog-io-giving-credit-to-creators/'>IndieGoGo</a>, please check out the campaign and <a href='http://elog.io/40m'>help us spread the word</a>", 'html');
+popup.open("<h2>Help us give credit!</h2><p>Hi, you may not have seen, but we've launched a campaign to help support future work on Elog.io at <a href='indiegogo.com/campaigns/elog-io-giving-credit-to-creators/'>IndieGoGo</a>, please check out the campaign and <a href='http://elog.io/40m'>help us spread the word</a><br /><br /><a href='javascript:popup.close()'>close</a>", 'html');
 
 </script>
 	</body>
