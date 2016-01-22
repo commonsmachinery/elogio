@@ -32,9 +32,3 @@ social:
   - icon: github
     title: github
     url: https://github.com/commonsmachinery
-
-download:
-  - title: Chrome
-    url: https://chrome.google.com/webstore/detail/elogio-browser-extension/fggflpkcoiangfbhbekafhpkijbglcmi
-  - title: Firefox
-    url: https://addons.mozilla.org/en-US/firefox/addon/elogio/
